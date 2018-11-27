@@ -13,8 +13,6 @@ DB_NAME = 'reminder_db.db'
 conn = sql.connect(DB_NAME)
 cursor = conn.cursor()
 
-# Reminder ASCII Art for style
-header = ""
 
 # If a table is exists then drop and make a fresh one
 def create_table():
