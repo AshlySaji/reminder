@@ -17,9 +17,8 @@ cursor = conn.cursor()
 # If a table is exists then drop and make a fresh one
 def create_table():
 	cursor.executescript("""
-        DROP TABLE IF EXISTS reminder;
-		CREATE TABLE reminder (
-    	id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
+		CREATE TABLE IF EXISTS reminder (
+    		id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
     		title    TEXT,
 		create_date TEXT,
 		remind_date TEXt);
