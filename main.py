@@ -20,7 +20,7 @@ def create_table():
         DROP TABLE IF EXISTS reminder;
 		CREATE TABLE reminder (
     	id  INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT UNIQUE,
-    	title    TEXT,
+    		title    TEXT,
 		create_date TEXT,
 		remind_date TEXt);
 		""")
@@ -29,7 +29,7 @@ def create_table():
 def insert_remind(rem_name, rem_date):
 	cursor.execute('''INSERT OR IGNORE INTO reminder (
 		title, create_date, remind_date) 
-        VALUES ( ?, ?, ? )''', ( rem_name, str(datetime.now()).split('.')[0], rem_date)) 
+        	VALUES ( ?, ?, ? )''', ( rem_name, str(datetime.now()).split('.')[0], rem_date)) 
 	conn.commit()
 	
 # Reminder creation function like get date and content
@@ -113,8 +113,7 @@ menuItems = [
     { "Update reminder": 1 },
     { "View specific": 2 },
     { "View all": 3 },
-    { "Exit": 4 },
-]
+    { "Exit": 4 },]
 			
 def main_menu():                                
 	while True:
